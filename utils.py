@@ -72,8 +72,8 @@ def create_gif(gif_name, filepath, duration=0.1):
 
 def main():
     """"""
-    gif_name = './data/train/train_features.gif'
-    filepath = './data/train/'
+    gif_name = './data/test/test_features.gif'
+    filepath = './data/test/'
     create_gif(gif_name, filepath)
 
 

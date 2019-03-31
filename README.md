@@ -16,7 +16,7 @@ python train.py
 ```
 
 ## Result
-![Angular softmax loss. Left: train. Right: test.]()
+![Angular softmax loss. Left: train. Right: test.](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/train/train_features.gif)
 
 
 ## Formula
