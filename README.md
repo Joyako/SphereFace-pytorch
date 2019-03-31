@@ -24,12 +24,11 @@ python train.py
 ![Original Softmax Loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.29.07%20AM.png)
 
 2.The L-Softmax loss is defined as:  
-![L-Softmax Loss]()
+![L-Softmax Loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.46.53%20AM.png)
 
 3.Modified softmax loss(Normalization: ||w|| = 1, bais = 0):  
-![Modified softmax loss]()
+![Modified softmax loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.51.41%20AM.png)
 
 4.A-Softmax loss:  
-![A-Softmax loss]()
+![A-Softmax loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.55.58%20AM.png)
 
-5.

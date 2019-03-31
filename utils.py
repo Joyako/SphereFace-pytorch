@@ -49,7 +49,7 @@ def visual_feature_space(features, labels, num_classes, epoch, acc, name_dict, m
         plt.close()
 
 
-def create_gif(gif_name, filepath, duration=0.2):
+def create_gif(gif_name, filepath, duration=0.1):
     """
 
     :param gif_name:
@@ -59,6 +59,11 @@ def create_gif(gif_name, filepath, duration=0.2):
     """
     frames = []
     file_list = os.listdir(filepath)
+    for f in file_list:
+        head, tail = os.path.splitext(f)
+        if tail != '.png':
+            file_list.remove(f)
+    file_list.sort()
     image_list = [os.path.join(filepath, x) for x in file_list]
     for image_name in image_list:
         frames.append(imageio.imread(image_name))
@@ -67,7 +72,7 @@ def create_gif(gif_name, filepath, duration=0.2):
 
 def main():
     """"""
-    gif_name = 'train_features.gif'
+    gif_name = './data/train/train_features.gif'
     filepath = './data/train/'
     create_gif(gif_name, filepath)
 
