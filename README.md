@@ -36,3 +36,6 @@ Test:
 4.A-Softmax loss:  
 ![A-Softmax loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.55.58%20AM.png)
 
+# Network
+SphereFace20 network framework:
+![network](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/sphereface20.png)

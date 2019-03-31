@@ -9,7 +9,6 @@ import torch.optim as optim
 from torchvision import datasets, transforms, utils
 from torch.utils.data import DataLoader
 from torch.autograd import Variable
-import torch.nn.functional as F
 from tensorboardX import SummaryWriter
 
 from module import SphereFace20, AngularSoftmaxWithLoss
@@ -198,7 +197,7 @@ def train(args, model, data_loader, optimizer, epoch, criterion, writer, iter_co
         iter_count += 1
     embeddings = np.concatenate(embeddings, 0)
     nlabels = np.concatenate(nlabels, 0)
-    visual_feature_space(embeddings, nlabels, args.num_classes, epoch, './data/train/')
+    visual_feature_space(embeddings, nlabels, args.num_classes, epoch, top1.avg, './data/train/')
     test(args, model, data_loader['test'], epoch, criterion, writer, iter_count)
 
 
@@ -254,7 +253,7 @@ def test(args, model, data_loader, epoch, criterion, writer, iter_count):
 
         embeddings = np.concatenate(embeddings, 0)
         nlabels = np.concatenate(nlabels, 0)
-        visual_feature_space(embeddings, nlabels, args.num_classes, epoch, './data/test/')
+        visual_feature_space(embeddings, nlabels, args.num_classes, epoch, top1.avg, './data/test/')
 
 
 def main():
@@ -281,8 +280,17 @@ def main():
         writer.add_graph(model, (input_data, ))
         for epoch in range(1, args.epochs + 1):
             adjust_learning_rate(args, optimizer, epoch - 1)
-            iter_count = int(np.ceil(len(train_loader) / args.batch_size)) * (epoch - 1)
+            iter_count = len(train_loader) * (epoch - 1)
             train(args, model, data_loader, optimizer, epoch, criterion, writer, iter_count)
+
+    # Draw feature map.
+    gif_name = {
+        'train': './data/train/train_features.gif',
+        'test': './data/test/test_features.gif'}
+    filepath = {'train': './data/train/',
+                'test': './data/test/'}
+    for i in ['train', 'test']:
+        create_gif(gif_name[i], filepath[i])
 
 
 if __name__ == '__main__':
