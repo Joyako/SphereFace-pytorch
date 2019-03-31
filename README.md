@@ -20,7 +20,7 @@ python train.py
 
 
 ## Formula
-1.Original Softmax Loss:
+1.Original Softmax Loss:  
 ![Original Softmax Loss:](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.29.07%20AM.png)
 
 
