@@ -18,7 +18,7 @@ python train.py
 ## Result
 Angular softmax loss feature map in MNIST.  
 Train:  
-![train features](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/train/train_features.gif)
+![train features](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/train/train_features.gif)  
 Test:  
 ![test features](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/test/test_features.gif)
 
