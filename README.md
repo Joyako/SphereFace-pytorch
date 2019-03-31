@@ -16,12 +16,20 @@ python train.py
 ```
 
 ## Result
-![Angular Softmax Loss. Left: train. Right: test.]()
+![Angular softmax loss. Left: train. Right: test.]()
 
 
 ## Formula
-1.Original Softmax Loss:  
-![Original Softmax Loss:](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.29.07%20AM.png)
+1.The original softmax loss is defined as:  
+![Original Softmax Loss](https://github.com/Joyako/SphereFace-pytorch/blob/master/data/formalu/Screen%20Shot%202019-03-31%20at%2011.29.07%20AM.png)
 
+2.The L-Softmax loss is defined as:  
+![L-Softmax Loss]()
 
-    
+3.Modified softmax loss(Normalization: ||w|| = 1, bais = 0):  
+![Modified softmax loss]()
+
+4.A-Softmax loss:  
+![A-Softmax loss]()
+
+5.
