@@ -108,7 +108,7 @@ class SphereFace(nn.Module):
         https://arxiv.org/abs/1704.08063
     """
 
-    def __init__(self, block, layers, num_classes=10):
+    def __init__(self, block, layers, num_classes=10, feat_dim=2):
         """
 
         :param block: residual units.
@@ -137,8 +137,8 @@ class SphereFace(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2])
         self.layer4 = self._make_layer(block, 512, layers[3])
         self.fc5 = nn.Linear(512 * 2 * 2, 512)
-        self.fc6 = nn.Linear(512, 2)
-        self.fc7 = AngleLayer(2, num_classes)
+        self.fc6 = nn.Linear(512, feat_dim)
+        self.fc7 = AngleLayer(feat_dim, num_classes)
 
     def _make_layer(self, block, planes, blocks, stride=1):
         if blocks != 0:
