@@ -4,7 +4,7 @@
 This project use [MNIST](https://github.com/Joyako/SphereFace-pytorch/tree/master/data/MNIST) as train data, which include 
 network SphereFace4, SphereFace20 etc. and take shortcut connection implementation.
 
-## How to use it, as follow:
+## Install & Run:
 1.Download
 ```bash
 git clone git@github.com:Joyako/SphereFace-pytorch.git
